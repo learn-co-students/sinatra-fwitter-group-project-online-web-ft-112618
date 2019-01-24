@@ -1,0 +1,5 @@
+<h2><%= "Welcome, #{current_user.username}" if logged_in? %></h2>
+<% @tweets.each do |tweet| %>
+<h3>Tweet by <%= tweet.user.username %></h3>
+<p><%= tweet.content %></p>
+<% end %>
