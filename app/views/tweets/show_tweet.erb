@@ -1,0 +1,10 @@
+<div class="center">
+<h2>Show Tweet</h2>
+<form method="post" action="/tweets/<%= @tweet.id %>">
+  <input type="hidden" id="hidden" name ="_method" value="DELETE">
+  <input type="text" name="content" value="<%= @tweet.content %>"><br>
+  <input type="submit" class="button" value="Delete Tweet">
+</form><br>
+<button class="button" onclick="window.location='/tweets/<%= @tweet.id %>/edit'">Edit Tweet</button>
+<button class="button" onclick="window.location='/tweets'">Back</button>
+</div>

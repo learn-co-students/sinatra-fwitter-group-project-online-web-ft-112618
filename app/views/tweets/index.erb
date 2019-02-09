@@ -1,0 +1,7 @@
+<div class="center">
+<h3> Welcome, <%= current_user(session).username %> </h3>
+<% @tweets.each do |tweet| %>
+  <a href="/tweets/<%= tweet.id %>"><%= tweet.content %><a><br>
+<% end %><br>
+<button class="button" onclick="window.location='/tweets/new'">New Tweet</button>
+</div>
